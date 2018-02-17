@@ -20,8 +20,8 @@ body {
 }
     
 
-  button {
-      background-image:url("../images/chump.jpeg");
+button {
+      background-image:url("../images/Chump.jpeg");
       height: 300px;
       width: 500px;
       margin-left: auto;
@@ -47,7 +47,7 @@ body {
 	font-family: 'Chewy', cursive;
     font-size: 70px;
     background-color:cornsilk;
-	
+	color: orange;
 
 }
 
@@ -55,6 +55,8 @@ body {
 	font-family: 'Chewy', cursive;
     background-color:cornsilk;
     font-size: 70px;
+    color: orange;
+    
     
 }
 
@@ -88,7 +90,7 @@ h3 {
  #start_button {
 	margin-top: 10%;
 	border: 2px solid orange;
-    background-image:url("../images/chump.jpeg");
+    background-image:url("./assets/images/Chump.jpeg");
 }
 
 
