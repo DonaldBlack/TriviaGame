@@ -133,21 +133,20 @@ h3 {
         font-size: 20px;
     }
     button {
+        width: 640px;
         display: block;
     }
-    img {
-        width: 100%;
-    }
-
+    
 
 @media screen and (max-width: 640px) {
 
-
+.container {
+		width: 100%;
+	}
 button {
     display: block;
 }
 
 body {
-    background-size: 100% 100%;
-}
+    width: 340px;
 }
