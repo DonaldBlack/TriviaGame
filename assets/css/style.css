@@ -136,6 +136,10 @@ h3 {
         width: 640px;
         display: block;
     }
+
+    h1{
+        width: 640px;
+    }
     
 
 @media screen and (max-width: 640px) {
@@ -148,5 +152,9 @@ button {
 }
 
 body {
+    width: 340px;
+}
+
+h1{
     width: 340px;
 }
