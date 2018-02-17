@@ -1,0 +1,148 @@
+html {
+    background-image:url("../images/giphy (1).gif");
+    
+}
+
+body {
+
+	text-align: center;
+}
+
+.border {
+    color: orange;
+    text-align: center;
+    font-size: 40px;
+    background-color: cornsilk;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  
+}
+    
+
+  button {
+      background-image:url("../images/chump.jpeg");
+      height: 300px;
+      width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Chewy', cursive;
+      display: block;
+      
+  }
+  h1 {
+	font-family: 'Chewy', cursive;
+	font-size: 75px;
+	font-weight: bold;
+	color: orange;
+	padding: 10px 0px 10px 0px;
+	margin: 0px 0px 50px 0px;
+}
+
+  #questions {
+      background-color: cornsilk;
+  }
+
+  #subcontainer h2 {
+	font-family: 'Chewy', cursive;
+    font-size: 70px;
+    background-color:cornsilk;
+	
+
+}
+
+#subcontainer h3 {
+	font-family: 'Chewy', cursive;
+    background-color:cornsilk;
+    font-size: 70px;
+    
+}
+
+h2 {
+	font-size: 50px;
+    margin-bottom: 35px;
+    color: orange;
+    background-color: cornsilk;
+}
+
+h3 {
+	font-size: 35px;
+	margin-bottom: 20px;
+    color: orange;
+    background-color: cornsilk;
+}
+  
+ .footer {
+    color: orange;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    
+    text-align: center;
+ }
+
+ /*apps*/
+
+ #start_button {
+	margin-top: 10%;
+	border: 2px solid orange;
+
+}
+
+
+#done {
+	
+	border: 2px solid orange;
+	background: orange;
+}
+
+
+ /***********Media Screens**************/
+
+@media screen and (max-width: 980px){
+    button {
+        height: 300;
+        width: 500px;
+    }
+    body {
+        width: 768px;
+        background-size: cover;
+    }
+    button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body {
+        width: 95%;
+        max-width: 95%;
+    
+    }
+
+    body {
+        width: 640px;
+    }
+        font-size: 20px;
+    }
+    button {
+        display: block;
+    }
+    img {
+        width: 100%;
+    }
+
+
+@media screen and (max-width: 640px) {
+
+
+button {
+    display: block;
+}
+
+body {
+    background-size: 100% 100%;
+}
+}
