@@ -23,7 +23,7 @@ body {
 button {
       background-image:url("../images/Chump.jpeg");
       height: 300px;
-      width: 500px;
+      width: 450px;
       margin-left: auto;
       margin-right: auto;
       font-family: 'Chewy', cursive;
@@ -112,8 +112,8 @@ h3 {
 
 @media screen and (max-width: 980px){
     button {
-        height: 300;
-        width: 500px;
+        height: 300px;
+        width: 450px;
     }
     body {
         width: 768px;
@@ -133,7 +133,7 @@ h3 {
         font-size: 20px;
     }
     button {
-        width: 640px;
+        width: 500px;
         display: block;
     }
 
@@ -146,7 +146,8 @@ h3 {
 
 .container {
 		width: 100%;
-	}
+    }
+    
 button {
     display: block;
 }
@@ -155,6 +156,29 @@ body {
     width: 340px;
 }
 
-h1{
+h1 {
     width: 340px;
+}
+}
+
+@media only screen {
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+}
+
+/* Portrait */
+@media only screen {
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen {
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
 }
