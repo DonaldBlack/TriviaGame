@@ -19,7 +19,7 @@ var questions = [{
 
 }, {	
 
-	question: "During his presidential campaign, Trump denigrated which of the folowing groups?",
+	question: "During his presidential campaign, Trump denigrated which of the following groups?",
 	choices: ["Disabled", "Women", "Immigrants", "All of the Above"],
 	correctAnswer: "All of the Above"
 
