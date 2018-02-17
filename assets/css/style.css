@@ -40,22 +40,21 @@ button {
 }
 
   #questions {
-      background-color: cornsilk;
+ 
   }
 
   #subcontainer h2 {
 	font-family: 'Chewy', cursive;
     font-size: 70px;
-    background-color:cornsilk;
-	color: orange;
+    
 
 }
 
 #subcontainer h3 {
 	font-family: 'Chewy', cursive;
-    background-color:cornsilk;
+    
     font-size: 70px;
-    color: orange;
+ 
     
     
 }
@@ -64,14 +63,14 @@ h2 {
 	font-size: 50px;
     margin-bottom: 35px;
     color: orange;
-    background-color: cornsilk;
+   
 }
 
 h3 {
 	font-size: 35px;
 	margin-bottom: 20px;
     color: orange;
-    background-color: cornsilk;
+    
 }
   
  .footer {
@@ -90,7 +89,7 @@ h3 {
  #start_button {
 	margin-top: 10%;
 	border: 2px solid orange;
-    background-image:url("./assets/images/Chump.jpeg");
+    background-image:url("../images/Chump.jpeg");
 }
 
 
