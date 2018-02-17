@@ -1,109 +1,140 @@
-var userPick;
 
-var correctAnswer = 0;
+var panel = $("#start_button");
 
-var incorrectAnswer = 0;
+$(document).on("click", "#start_button", function(event){
+  game.start();
 
-var unAnswer = 0;
-
-var question = 0;
-
-var images;
-
-var count=30;
-
-var trumpQuestions  = [{
-question: "Which Porn Star allegedly spanked Donald Trump with a Forbes magazine",
-choices: ["Jenna Jameson", "Stormy Daniels", "Kay Parker", "Melania Trump" ],
-images:  ["../images/stormyD.jpeg"],
-validAnswer: 1
-}, {
-question:"In Peter Pan, Captain Hook had a hook on which part of his     body?",
-choices: ["Right Foot", "Left Hand", "Left Foot", "Right Hand"],
-validAnswer: 1
-
-}, {
-question:"In the Lion King, where does Mufasa and his family live?",
-choices: ["Rocky Mountain", "Forest", "Desert", "Pride Rock"],
-validAnswer: 3
-
-}, {
-question:"In Beauty and the Beast, how many eggs does Gaston eat for    breakfast?",
-choices: ["2 Dozen", "5 Dozen", "5000", "0"],
-validAnswer: 1
-
-}, {
-question:"In Alice in Wonderland, what is the name of Alice’s kitten?",
-choices: ["Dinah", "Sammie", "Kat", "Luna"],
-validAnswer: 0
-
- }, {
-question:"After being on earth, where did Hercules first meet his   father Zeus?",
-choices: ["Mount Olympus", "Greece", "In the Temple of Zeus", "Elysian   Fields"],
-validAnswer: 2
-
-}, {
-question:"During the ballroom scene of Beauty & the Beast, what color is Belle’s Gown?",
-choices: ["Yellow", "Blue", "Gold", "White"],
-validAnswer: 2
-
-}, {
-question:"In Bambi, what word does the owl use to describe falling in love?",
-choices: ["Whimsical", "Miserable", "Joyful", "Twitterpatted"],
-validAnswer: 3
-
-}
-
-];
-
-$("#start_button").click(function(){
-$(this).hide();
-counter = setInterval(timer, 1000); 
-questionNum();
-}); 
-
-
-function timer(){
-count--;
-if (count <= 0) {
- clearInterval(counter);
- return;
-}
-
- $("#timer").html("Time remaining: " + "00:" + count + " secs");
-}
-
-for (i = 0; i <= questionNum; i++) {
-
-function questionNum() {
-$("#questions").html(trumpQuestions [0].question);
-question++;
-
-  var choicesArr = trumpQuestions [0].choices;
-  var buttonsArr = [];
-
-  for (let i = 0; i < choicesArr.length; i++) {
-    var button = $('<button>');
-    button.text(choicesArr[i]);
-    button.attr('data-id', i);
-    $('#questions').append(button);
-
-   }
-
-  } 
-}
- $('#questions').on('click', 'button', function(e){
- userPick = $(this).data("id");
- trumpQuestions [0].validAnswer;
- if(userPick != trumpQuestions [0].validAnswer) {
-
- $('#questions').text("Wrong Answer! The correct answer is Stormy Daniels.");
- incorrectAnswer++;
-
-} else if (userPick === trumpQuestions [0].validAnswer) {
-$('#questions').text("Correct!!! Stormy Spanked Donny");
-correctAnswer++;
-
-}
-
+  
 });
+
+$(document).on("click", "#done", function(event){
+  game.done();
+});
+
+var questions = [{
+	question: "Which Porn Star allegedly spanked Donald Trump with a Forbes magazine during an affair?",
+	choices: ["Jenna Jameson", "Stormy Daniels", "Kay Parker", "Ivanka Trump"],
+    correctAnswer: "Stormy Daniels"
+    
+
+}, {	
+
+	question: "During his presidential campaign, Trump denigrated which of the folowing groups?",
+	choices: ["Disabled", "Women", "Immigrants", "All of the Above"],
+	correctAnswer: "All of the Above"
+
+}, {
+
+	question: "Sexual misconduct allegations have been made against Trump by at least how many women?",
+	choices: ["24", "33", "25", "19"],
+	correctAnswer: "19"
+
+}, {
+
+	question: "How many of Trumps grandparents immigrated to the United States??",
+	choices: ["One", "Two", "Three", "Four"],
+	correctAnswer: "Four"
+
+}, {
+
+	question: "Which foreign country did Trump allegedly collude with during the 2016 election?",
+	choices: ["Mexico", "Germany", "Russia", "China"],
+	correctAnswer: "Russia"
+
+}];
+
+var game = {
+	correct: 0,
+	incorrect: 0,
+	counter: 60,
+
+  countdown: function() {
+  	game.counter--;
+  	$("#counter-number").html(game.counter);
+
+  	if (game.counter === 0) {
+  		alert("TIME'S UP");
+  		game.done();
+
+  	}
+  },
+
+  start: function() {
+  	timer = setInterval(game.countdown, 1000);
+  	$('#subcontainer').prepend('<h2>Time Remaining: <span id="counter-number">60</span> Seconds</h2>');
+  	$("#start").remove();
+
+  	for (var i = 0; i < questions.length; i++) {
+      panel.append('<h2>' + questions[i].question + '</h2>');
+      for (var j = 0; j < questions[i].choices.length; j++){
+        panel.append('<input type="radio" name ="question' + '-' + i + '"value="' + questions[i].choices[j] + '">' + questions[i].choices[j]);
+        }
+  		}
+  		panel.append("<button id='done'>DONE</button>");
+      
+  	},
+
+  	done: function() {
+
+  		$.each($("input[name='question-0']:checked"), function() {
+  			if ($(this).val() == questions[0].correctAnswer) {
+  				console.log(this);
+  				  game.correct++;
+  			} else {
+  				game.incorrect++;
+  			}
+
+  		});
+  		$.each($("input[name='question-1']:checked"), function() {
+  			if ($(this).val() == questions[1].correctAnswer) {
+  				console.log(this);
+  				game.correct++;
+  			} else {
+  				game.incorrect++;
+  			}
+
+  		});
+  		$.each($("input[name='question-2']:checked"), function() {
+  			if ($(this).val() == questions[2].correctAnswer) {
+  				console.log(this);
+  				game.correct++;
+  			} else {
+  				game.incorrect++;
+  			}
+
+  		});
+  		$.each($("input[name='question-3']:checked"), function() {
+  			if ($(this).val() == questions[3].correctAnswer) {
+  				console.log(this);
+  				game.correct++;
+  			} else {
+  				game.incorrect++;
+  			}
+
+  		});
+  		$.each($("input[name='question-4']:checked"), function() {
+  			if ($(this).val() == questions[4].correctAnswer) {
+  				console.log(this);
+  				game.correct++;
+  			} else {
+  				game.incorrect++;
+  			}
+
+  		});
+
+  		this.results();
+  	},
+
+
+  	  results:function() {
+  	  	clearInterval(timer);
+
+  	  	$("#subcontainer h2").remove();
+  	   panel.html("<h2>You're Done!</h2>");
+  	   panel.append("<h3>You got this many right: " + this.correct + "</h3>");
+  	   panel.append("<h3>You got this many wrong: " + this.incorrect + "</h3>");
+  	   panel.append("<h3>You didn't answer this many: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
+  	  
+  	  }
+
+  };
