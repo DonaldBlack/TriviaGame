@@ -46,13 +46,14 @@ button {
   #subcontainer h2 {
 	font-family: 'Chewy', cursive;
     font-size: 70px;
+    background-color: cornsilk;
     
 
 }
 
 #subcontainer h3 {
 	font-family: 'Chewy', cursive;
-    
+    background-color: cornsilk;
     font-size: 70px;
  
     
@@ -63,6 +64,7 @@ h2 {
 	font-size: 50px;
     margin-bottom: 35px;
     color: orange;
+    background-color: cornsilk;
    
 }
 
@@ -70,6 +72,7 @@ h3 {
 	font-size: 35px;
 	margin-bottom: 20px;
     color: orange;
+    background-color: cornsilk;
     
 }
   
